@@ -5,7 +5,7 @@
 
 int main(int argc, char *const argv[])
 {
-    int number, outgoing,incoming,buck_size,store=0;
+    int number,outgoing,incoming,buck_size,store=0;
 
     printf("Enter the number of packets and outgoing limit and bucket size:");
     scanf("%d%d%d", &number,&outgoing,&buck_size);
@@ -22,7 +22,9 @@ int main(int argc, char *const argv[])
             printf("\n%d packets dropped",incoming-(buck_size-store));
             store=buck_size;
             printf("\npackets inside before passing:%d",store);
-            
+            /*Compares if the incoming size is too large to fit in the bucket
+              If yes: It removes the extra packets
+              If no: It adds the new packets*/
         }
 
         else
@@ -35,6 +37,7 @@ int main(int argc, char *const argv[])
         
         if(store<0)
         store=0;
+        //Total stored size cannot go negative
 
         printf("\npackets inside after passing:%d",store);
         number--;
