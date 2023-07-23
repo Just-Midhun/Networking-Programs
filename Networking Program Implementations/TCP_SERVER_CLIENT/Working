@@ -1,0 +1,17 @@
+Server:
+1)Create a socket- socket()
+2)Bind the socket to a port- bind()
+3)Set the reusability of the address and ports- setsockopt()
+4)Listen to active connection requests from any clients on the same Port- listen()
+5)Accept any request from client- accept()
+6)Read anything sent by client- recv()/read()
+7)Send a response back- send()
+8)On completion Stop.
+
+Client:
+1)Create a socket- socket()
+2)Convert the address to binary for- inet_pton()
+3)Send connection requests to any server on the same Port- connect()
+4)Send a number or string requesting as required by need- send()
+5)Read the result as given by server back after computation- read()/recv()
+5)On completion Stop.
