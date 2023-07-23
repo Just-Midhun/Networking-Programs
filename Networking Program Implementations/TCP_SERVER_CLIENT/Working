@@ -15,3 +15,10 @@ Client:
 4)Send a number or string requesting as required by need- send()
 5)Read the result as given by server back after computation- read()/recv()
 5)On completion Stop.
+
+In programming, we use the socket library in languages like Python to create TCP sockets. 
+By using socket.socket(socket.AF_INET, socket.SOCK_STREAM),
+we can establish a two-way communication channel between client and server, 
+allowing for bi-directional data transfer over a reliable connection.
+
+
