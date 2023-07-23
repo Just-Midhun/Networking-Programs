@@ -1,4 +1,4 @@
-#include <string.h>
+#include<string.h>
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
@@ -7,10 +7,12 @@ struct node{
     unsigned dist[20];
     unsigned from[20];
 }rt[10];
+//Creating a structure to save the chnages for node values.
 
 int main(int argc, char *const argv[])
 {   
     int nodes,costmat[100][100],count;
+    //Costmatrix is for temporary saved values of nodes.
 
     printf("Enter the number of nodes to create the dvr of:");
     scanf("%d", &nodes);
@@ -43,6 +45,7 @@ int main(int argc, char *const argv[])
                     rt[i].from[j] = k;
                     count++;
                 }
+                //Used to continuously check for possible shortest routing by using BELLMAN-FORD EQUATION
             }
         }
     }
