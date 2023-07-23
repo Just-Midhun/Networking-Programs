@@ -1,0 +1,16 @@
+Server:
+1)Create a socket- socket()
+2)Bind the socket to a port- bind()
+3)Read any file sent by client- recvfrom()
+4)Send back results to client as desired- sendto()
+5)On completion Stop.
+
+Client:
+1)Create a socket- socket()
+2)Send the desired value to server- sendto()
+3)Receive the result- recvfrom()
+8)On completion Stop.
+
+In programming, we use the socket library in languages like Python to create UDP sockets.
+With socket(socket.AF_INET, socket.SOCK_DGRAM), we can send and receive UDP datagrams between machines,
+making it suitable for quick, one-way data communication.
