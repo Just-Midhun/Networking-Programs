@@ -1,0 +1,24 @@
+Server:
+1)Create a socket- socket()
+2)Bind the socket to a port- bind()
+3)Set the reusability of the address and ports- setsockopt()
+4)Listen to active connection requests from any clients on the same Port- listen()
+5)Accept any request from client- accept()
+6)Read any file sent by client- recv()
+7)Open the file in read mode through an array and read the file- fopen()
+8)Check for all Condition inside the file:
+  -Error
+  -Complete
+  -Reading
+9)Iterate over all the given condition and send back the files to client.
+9)On completion Stop.
+
+Client:
+1)Create a socket- socket()
+2)Convert the address to binary for- inet_pton()
+3)Send connection requests to any server on the same Port- connect()
+4)Read the name of the file to copied by the user
+5)Send the file to server for checking- send()
+6)Give a new file name for creating a new file to accept responses from server
+7)Read the parts sent by server by opening the new file in write mode- fopen()
+8)On completion Stop.
